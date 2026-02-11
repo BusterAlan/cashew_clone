@@ -6,7 +6,8 @@ class ProSubscriptionPage extends StatelessWidget {
   const ProSubscriptionPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
+  Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(title: Text("Pro subscription")),
+    body: Center(child: Text("Pro subscription page")),
+  );
 }

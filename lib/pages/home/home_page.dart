@@ -9,9 +9,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
       title: Text("Inicio"),
+      actions: [
+        IconButton(
+          icon: Icon(Icons.density_medium),
+          onPressed: () => _onPressed(context),
+        ),
+      ],
     ),
-    body: Center(
-      child: Text("Home page"),
-    ),
+    body: Center(child: Text("Home page")),
   );
+
+  void _onPressed(BuildContext context) {
+    // TODO: Implement onPressed of AppBar
+  }
 }

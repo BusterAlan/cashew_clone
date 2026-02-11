@@ -1,8 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:cashew_clone/routes/app_router.gr.dart';
-import 'package:cashew_clone/routes/more_actions_routes.dart';
 import 'package:cashew_clone/routes/route_names.dart';
-import 'package:cashew_clone/routes/transaction_routes.dart';
 
 @AutoRouterConfig()
 class AppRouter extends RootStackRouter {
@@ -17,9 +15,21 @@ class AppRouter extends RootStackRouter {
       initial: true,
       children: [
         AutoRoute(page: HomeRoute.page, path: RouteNames.home, initial: true),
-        TransactionRoutes.routing,
+        AutoRoute(page: TransactionsRoute.page, path: RouteNames.transactions),
+        AutoRoute(
+          page: AddTransactionRoute.page,
+          path: RouteNames.addTransaction,
+        ),
+        AutoRoute(
+          page: SearchTransactionRoute.page,
+          path: RouteNames.searchTransaction,
+        ),
         AutoRoute(page: BudgetRoute.page, path: RouteNames.budget),
-        MoreActionsRoutes.routing,
+        AutoRoute(page: MoreActionsRoute.page, path: RouteNames.moreActions),
+        AutoRoute(
+          page: ProSubscriptionRoute.page,
+          path: RouteNames.proSubscription,
+        ),
       ],
     ),
   ];

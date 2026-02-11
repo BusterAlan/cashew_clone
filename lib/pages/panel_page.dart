@@ -8,21 +8,29 @@ class PanelPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => AutoTabsScaffold(
-      routes: const [
-        HomeRoute(),
-        TransactionsRoute(),
-        BudgetRoute(),
-        MoreActionsRoute(),
-      ],
-      bottomNavigationBuilder: (_, tabsRouter) => BottomNavigationBar(
-          currentIndex: tabsRouter.activeIndex,
-          onTap: tabsRouter.setActiveIndex,
-          items: const [
-            BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
-            BottomNavigationBarItem(label: 'Transactions', icon: Icon(Icons.wallet)),
-            BottomNavigationBarItem(label: 'Budget', icon: Icon(Icons.pie_chart)),
-            BottomNavigationBarItem(label: 'More actions', icon: Icon(Icons.drag_handle)),
-          ],
+    routes: const [
+      HomeRoute(),
+      TransactionsRoute(),
+      BudgetRoute(),
+      MoreActionsRoute(),
+    ],
+    bottomNavigationBuilder: (_, tabsRouter) => BottomNavigationBar(
+      currentIndex: tabsRouter.activeIndex,
+      onTap: tabsRouter.setActiveIndex,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      items: const [
+        BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
+        BottomNavigationBarItem(
+          label: 'Transactions',
+          icon: Icon(Icons.wallet),
         ),
-    );
+        BottomNavigationBarItem(label: 'Budget', icon: Icon(Icons.pie_chart)),
+        BottomNavigationBarItem(
+          label: 'More actions',
+          icon: Icon(Icons.drag_handle),
+        ),
+      ],
+    ),
+  );
 }
