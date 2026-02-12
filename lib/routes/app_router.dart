@@ -16,21 +16,18 @@ class AppRouter extends RootStackRouter {
       children: [
         AutoRoute(page: HomeRoute.page, path: RouteNames.home, initial: true),
         AutoRoute(page: TransactionsRoute.page, path: RouteNames.transactions),
-        AutoRoute(
-          page: AddTransactionRoute.page,
-          path: RouteNames.addTransaction,
-        ),
-        AutoRoute(
-          page: SearchTransactionRoute.page,
-          path: RouteNames.searchTransaction,
-        ),
         AutoRoute(page: BudgetRoute.page, path: RouteNames.budget),
         AutoRoute(page: MoreActionsRoute.page, path: RouteNames.moreActions),
-        AutoRoute(
-          page: ProSubscriptionRoute.page,
-          path: RouteNames.proSubscription,
-        ),
       ],
+    ),
+    AutoRoute(
+      page: ProSubscriptionRoute.page,
+      path: RouteNames.proSubscription,
+    ),
+    AutoRoute(page: AddTransactionRoute.page, path: RouteNames.addTransaction),
+    AutoRoute(
+      page: SearchTransactionRoute.page,
+      path: RouteNames.searchTransaction,
     ),
   ];
 }

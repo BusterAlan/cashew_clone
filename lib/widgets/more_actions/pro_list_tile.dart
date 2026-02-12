@@ -32,12 +32,39 @@ class ProListTile extends StatelessWidget {
                 crossAxisAlignment: .start,
                 mainAxisAlignment: .center,
                 children: [
-                  Text(
-                    "Cashew",
-                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Row(
+                    mainAxisSize: .min,
+                    children: [
+                      Text(
+                        "Cashew",
+                        style: Theme.of(context).textTheme.headlineSmall
+                            ?.copyWith(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                      SizedBox(width: 10),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.blue.shade50,
+                          borderRadius: BorderRadius.horizontal(
+                            left: Radius.circular(20),
+                            right: Radius.circular(20),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            "Pro",
+                            style: Theme.of(context).textTheme.bodyMedium
+                                ?.copyWith(
+                                  color: const Color.fromARGB(255, 0, 40, 105),
+                                  fontWeight: FontWeight.bold,
+                                ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   Text(
                     "Presupueste cómo un profesional con Cashew Pro",

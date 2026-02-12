@@ -1,10 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:cashew_clone/widgets/more_actions/about_app_observations_section.dart';
-import 'package:cashew_clone/widgets/more_actions/config_list_tile.dart';
-import 'package:cashew_clone/widgets/more_actions/expenses_summary_list_tile.dart';
-import 'package:cashew_clone/widgets/more_actions/notifications_copy_section.dart';
-import 'package:cashew_clone/widgets/more_actions/pro_list_tile.dart';
 import 'package:flutter/material.dart';
+
+import '../../widgets/more_actions/more_actions.dart';
 
 @RoutePage()
 class MoreActionsPage extends StatelessWidget {
@@ -18,14 +15,28 @@ class MoreActionsPage extends StatelessWidget {
       ExpensesSummaryListTile(),
       AboutAppObservationsSection(),
       NotificationsCopySection(),
-      SizedBox(), // TODO: Implement Calendar and Register from
-      SizedBox(), // TODO: Implement Subscriptions and Scheduled
-      SizedBox(), // TODO: Implement Objectives and Loans
-      SizedBox(), // TODO: Implement Edit menu for Accounts, Budgets, Categories, and Titles
+      CalendarRegisterSection(),
+      SubscriptionsScheduledSection(),
+      ObjectivesLoansSection(),
+      EditMenuSection(),
     ];
 
     return Scaffold(
-      appBar: AppBar(title: Text("Más acciones")),
+      appBar: AppBar(
+        toolbarHeight: 75,
+        title: Text(
+          "Más acciones",
+          style: Theme.of(
+            context,
+          ).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () => _onPressed(context),
+            icon: Icon(Icons.question_answer),
+          ),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: ListView.separated(
@@ -35,5 +46,9 @@ class MoreActionsPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _onPressed(BuildContext context) {
+    // TODO: Implement url_launcher action to Cashew FAQ
   }
 }
