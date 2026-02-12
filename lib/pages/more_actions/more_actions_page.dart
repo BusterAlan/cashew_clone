@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:cashew_clone/widgets/cashew_app_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/more_actions/more_actions.dart';
 
@@ -43,7 +44,8 @@ class MoreActionsPage extends StatelessWidget {
     );
   }
 
-  void _onPressed(BuildContext context) {
-    // TODO: Implement url_launcher action to Cashew FAQ
-  }
+  void _onPressed(BuildContext context) => launchUrl(
+    Uri.https("cashewapp.web.app", "/faq.html"),
+    mode: LaunchMode.externalApplication,
+  );
 }
