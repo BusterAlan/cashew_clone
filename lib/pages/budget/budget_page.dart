@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:cashew_clone/widgets/cashew_app_bar.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -7,11 +8,19 @@ class BudgetPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(
-      title: Text("Presupuesto"),
+    appBar: CashewAppBar(
+      titleText: "Presupuesto",
+      actions: [
+        IconButton(
+          onPressed: () => _onPressed(context),
+          icon: Icon(Icons.edit),
+        ),
+      ],
     ),
-    body: Center(
-      child: Text("Budget page"),
-    ),
+    body: Center(child: Text("Budget page")),
   );
+
+  void _onPressed(BuildContext context) {
+    // TODO: Implement action
+  }
 }

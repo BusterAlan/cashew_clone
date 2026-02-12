@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:cashew_clone/widgets/cashew_app_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/more_actions/more_actions.dart';
@@ -22,14 +23,8 @@ class MoreActionsPage extends StatelessWidget {
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 75,
-        title: Text(
-          "Más acciones",
-          style: Theme.of(
-            context,
-          ).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
-        ),
+      appBar: CashewAppBar(
+        titleText: "Más acciones",
         actions: [
           IconButton(
             onPressed: () => _onPressed(context),
