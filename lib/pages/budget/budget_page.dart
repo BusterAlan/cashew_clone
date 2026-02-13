@@ -17,7 +17,17 @@ class BudgetPage extends StatelessWidget {
         ),
       ],
     ),
-    body: Center(child: Text("Budget page")),
+    body: Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: SizedBox(
+        width: double.infinity,
+        height: 200,
+        child: IconButton.outlined(
+          onPressed: () => _onPressed,
+          icon: Icon(Icons.add),
+        ),
+      ),
+    ),
   );
 
   void _onPressed(BuildContext context) {

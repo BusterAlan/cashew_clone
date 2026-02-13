@@ -1,9 +1,8 @@
 import 'package:cashew_clone/routes/app_router.dart';
+import 'package:cashew_clone/theme/cashew_themes.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MainApp());
-}
+void main() => runApp(MainApp());
 
 class MainApp extends StatelessWidget {
   MainApp({super.key});
@@ -14,24 +13,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp.router(
     debugShowCheckedModeBanner: false,
     themeMode: ThemeMode.dark,
-    darkTheme: ThemeData.dark().copyWith(
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        unselectedItemColor: Theme.of(context).colorScheme.onPrimary,
-        selectedItemColor: Theme.of(context).colorScheme.onPrimary,
-      ),
-      listTileTheme: ListTileThemeData(
-        iconColor: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadiusGeometry.circular(15),
-          side: BorderSide(
-            color: Theme.of(context).colorScheme.onPrimary.withAlpha(128),
-          ),
-        ),
-        subtitleTextStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
-          color: Theme.of(context).colorScheme.onPrimary.withAlpha(128),
-        ),
-      ),
-    ),
+    darkTheme: CashewThemes.dark(context),
     routerConfig: _appRouter.config(),
   );
 }
