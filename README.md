@@ -1,6 +1,6 @@
 # Cashew Clone
 
-Clon de la aplicación de finanzas personal Cashew, desarrollado desde cero en Flutter con enfoque en arquitectura modular y componentes reutilizables.
+Clon de la aplicación de finanzas personal [Cashew](https://github.com/jameskokoska/Cashew), desarrollado desde cero en Flutter con enfoque en arquitectura modular y componentes reutilizables.
 
 ## 📋 Descripción
 
