@@ -6,6 +6,10 @@ Clon de la aplicación de finanzas personal [Cashew](https://github.com/jameskok
 
 Aplicación de gestión financiera personal que replica las funcionalidades principales de Cashew. El proyecto está construido con una arquitectura limpia y modular, utilizando paquetes especializados para el manejo de navegación, estado y componentes de UI.
 
+## Demo (video)
+
+[Recorrido de lo hecho en clase](https://youtube.com/shorts/-cDT4eg4rFA?si=_wycqXoDMlFlzMJd)
+
 ## 🏗️ Arquitectura y Organización
 
 ### Estructura del Proyecto
