@@ -1,3 +1,4 @@
+import 'package:cashew_clone/extensions/double_extensions.dart';
 import 'package:flutter/material.dart';
 
 class CalendarRegisterSection extends StatelessWidget {
@@ -6,7 +7,7 @@ class CalendarRegisterSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(
     mainAxisAlignment: .spaceBetween,
-    children: [_Calendar(), SizedBox(width: 10), RegisterFrom()],
+    children: [_Calendar(), 10.0.w, RegisterFrom()],
   );
 }
 

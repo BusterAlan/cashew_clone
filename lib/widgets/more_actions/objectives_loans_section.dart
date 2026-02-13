@@ -1,3 +1,4 @@
+import 'package:cashew_clone/extensions/double_extensions.dart';
 import 'package:flutter/material.dart';
 
 class ObjectivesLoansSection extends StatelessWidget {
@@ -6,7 +7,7 @@ class ObjectivesLoansSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(
     mainAxisAlignment: .spaceBetween,
-    children: [_Objectives(), SizedBox(width: 10), _Loans()],
+    children: [_Objectives(), 10.0.w, _Loans()],
   );
 }
 

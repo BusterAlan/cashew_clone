@@ -1,3 +1,4 @@
+import 'package:cashew_clone/extensions/double_extensions.dart';
 import 'package:flutter/material.dart';
 
 class EditMenuSection extends StatelessWidget {
@@ -9,11 +10,11 @@ class EditMenuSection extends StatelessWidget {
     crossAxisAlignment: .start,
     children: [
       _Accounts(),
-      SizedBox(width: 10),
+      10.0.w,
       _Budgets(),
-      SizedBox(width: 10),
+      10.0.w,
       _Categories(),
-      SizedBox(width: 10),
+      10.0.w,
       _Titles(),
     ],
   );
@@ -66,7 +67,7 @@ class _Budgets extends StatelessWidget {
             crossAxisAlignment: .center,
             children: [
               Icon(Icons.pie_chart, size: 32),
-              SizedBox(height: 10),
+              10.0.h,
               Text("Presupuestos", textAlign: .center),
             ],
           ),

@@ -204,8 +204,8 @@ extension SizedBoxExtension on double {
 ```
 **Uso:** Sintaxis simplificada para espaciado
 ```dart
-10.h  // SizedBox(height: 10)
-20.w  // SizedBox(width: 20)
+10.0.h  // SizedBox(height: 10)
+20.0.w  // SizedBox(width: 20)
 ```
 
 ## 📱 Pantallas Implementadas

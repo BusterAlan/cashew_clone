@@ -1,3 +1,4 @@
+import 'package:cashew_clone/extensions/double_extensions.dart';
 import 'package:flutter/material.dart';
 
 class NotificationsCopySection extends StatelessWidget {
@@ -6,7 +7,7 @@ class NotificationsCopySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(
     mainAxisAlignment: .spaceBetween,
-    children: [_Notifications(), SizedBox(width: 10), _CopyFrom()],
+    children: [_Notifications(), 10.0.w, _CopyFrom()],
   );
 }
 

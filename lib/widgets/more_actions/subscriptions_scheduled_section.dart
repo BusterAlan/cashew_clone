@@ -1,3 +1,4 @@
+import 'package:cashew_clone/extensions/double_extensions.dart';
 import 'package:flutter/material.dart';
 
 class SubscriptionsScheduledSection extends StatelessWidget {
@@ -6,7 +7,7 @@ class SubscriptionsScheduledSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(
     mainAxisAlignment: .spaceBetween,
-    children: [_Subscriptions(), SizedBox(width: 10), _Scheduled()],
+    children: [_Subscriptions(), 10.0.w, _Scheduled()],
   );
 }
 

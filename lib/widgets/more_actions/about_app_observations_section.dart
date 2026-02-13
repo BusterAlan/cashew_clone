@@ -1,3 +1,4 @@
+import 'package:cashew_clone/extensions/double_extensions.dart';
 import 'package:flutter/material.dart';
 
 class AboutAppObservationsSection extends StatelessWidget {
@@ -6,7 +7,7 @@ class AboutAppObservationsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(
     mainAxisAlignment: .spaceBetween,
-    children: [_AboutCashew(), SizedBox(width: 10), _Observations()],
+    children: [_AboutCashew(), 10.0.w, _Observations()],
   );
 }
 

@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:cashew_clone/extensions/double_extensions.dart';
 import 'package:cashew_clone/routes/app_router.gr.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +44,7 @@ class ProListTile extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                       ),
-                      SizedBox(width: 10),
+                      10.0.w,
                       Container(
                         decoration: BoxDecoration(
                           color: Colors.blue.shade50,

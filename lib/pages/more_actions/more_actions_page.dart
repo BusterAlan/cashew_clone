@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:cashew_clone/extensions/double_extensions.dart';
 import 'package:cashew_clone/widgets/cashew_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -36,7 +37,7 @@ class MoreActionsPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: ListView.separated(
-          separatorBuilder: (context, index) => SizedBox(height: 10),
+          separatorBuilder: (context, index) => 10.0.h,
           itemBuilder: (context, index) => bodyWidgets[index],
           itemCount: 9,
         ),
